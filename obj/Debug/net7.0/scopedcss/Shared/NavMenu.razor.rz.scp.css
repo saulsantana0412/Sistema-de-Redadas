@@ -1,0 +1,29 @@
+.Menu[b-6jtjb9kvar]{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 8vh;
+    align-items: center;
+    background-color: var(--negro);
+    font-size: 15px;
+    font-weight: 700;
+    justify-content: space-around;
+    padding: 0 100px;
+    box-sizing: border-box;
+    font-family: 'Martian Mono', monospace;
+}
+
+.Menu a[b-6jtjb9kvar]{
+    font-family: 'Martian Mono', monospace;
+    text-decoration: none;
+    color: #fff;
+}
+
+.Menu a:hover[b-6jtjb9kvar]{
+    color: var(--azul);
+}
+
+.icono[b-6jtjb9kvar] {
+    width: 30px;
+    fill: aqua;
+}

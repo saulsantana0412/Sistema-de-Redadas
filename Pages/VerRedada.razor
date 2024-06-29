@@ -1,0 +1,153 @@
+﻿@page "/VerRedada"
+@page "/VerRedada/{id:int}"
+@page "/VerRedada/{id:int}/{nombre}"
+@inject IRedadaService RedadaService
+@inject IPersonaService PersonaService
+@inject NavigationManager NavigationManager
+
+
+<NavMenu />
+<div class="Detenidos-Contenedor">
+	<h1>Detenidos de redada @nombre</h1>
+
+<div class="Redadas-Contenedor-Tabla">
+	<table class="Redadas-Tabla">
+		<tr>
+			<th>Nombre </th>
+			<th>Tipo Vehiculo </th>
+			<th>Responsable </th>
+			<th>Fecha</th>
+			<th>Detenidos </th>
+			<th>Dinero</th>
+			<th class="Acciones"></th>
+		</tr>
+
+			<tr class="registro">
+				<td>@r.Nombre</td>
+				<td>@r.Tipo_Vehiculo</td>
+				<td>@r.Responsable</td>
+				<td>@r.FechaRedada</td>
+				<td>@cantidad</td>
+				<td>@dinero</td>
+				<td class="Acciones">
+					<div class="accion">
+					<a href="/VerRedada/@r.Id/@r.Nombre"><i class="fa-solid fa-eye"></i></a> <a href="/GestionRedada/@r.Id"><i class="fa-solid fa-pen-to-square"></i></a>
+					</div>
+				</td>
+			</tr>
+		
+
+	</table>
+</div>
+
+	<div class="Detenidos-Contenedor-Tabla">
+	<table class="Detenidos-Tabla">
+		<tr>
+			<th id="Nombre">Nombre<button @onclick="OrdenarNombre">@((ordenarNombre? "↑" : "↓"))</button></th>
+			<th>Apellido<button @onclick="OrdenarApellido">@((ordenarApellido? "↑" : "↓"))</button></th>
+			<th>Nacionalidad</th>
+			<th>Identificacion</th>
+			<th>Color</th>
+			<th>Genero</th>
+			<th>Nacimiento<button @onclick="OrdenarEdad">@((ordenarEdad? "↑" : "↓"))</button></th>
+			<th>Codigo Vital</th>
+			<th>Latitud</th>
+			<th>Longitud</th>
+			<th>Dinero</th>
+			<th>Redada</th>
+		</tr>
+
+		@if(personas is not null){
+		foreach (var p in personas)
+		{
+			<tr class="registro">
+				<td title="Nombre">@p.Nombre</td>
+				<td title="Apellido">@p.Apellido</td>
+				<td title="Nacionalidad">@p.Nacionalidad</td>
+				<td title="Identificacion">@p.Identificacion</td>
+				<td title="Color">@p.Color</td>
+				<td title="Genero">@p.Genero</td>
+				<td title="Fecha de Nacimiento">@p.Fecha_Nacimiento</td>
+				<td title="Codigo Vital">@p.Codigo_Vital</td>
+				<td title="Latitud">@p.Latitud</td>
+				<td title="Longitud">@p.Longitud</td>
+				<td title="Dinero">@p.Dinero</td>
+				<td title="Nombre de la Redada">@PersonaService.Redada(p.Id_Redada)</td>
+			</tr>
+		}}
+
+	</table>
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public int id { get; set; }
+	[Parameter]
+	public string nombre { get; set; } ="";
+	List<Persona>? personas;
+	Redada r = new Redada();
+	string componente = "";
+	Persona persona = new Persona();
+
+	private int dinero;
+	private int cantidad;
+	public string redada(int id)
+	{
+		string redada = PersonaService.Redada(id);
+		return redada;
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		personas = (await PersonaService.ObtenerPersonas(id)).ToList();
+		r = await RedadaService.ObtenerRedadaPorId(id);
+		cantidad = PersonaService.CantidadPersonas(id);
+		dinero = PersonaService.CantidadDinero(id);
+	}
+
+	private bool ordenarNombre = true;
+
+	public void OrdenarNombre(){
+
+		if (personas is not null)
+		{
+			if (ordenarNombre){
+				personas = personas.OrderBy(p => p.Nombre).ToList();
+
+			}else{
+				personas = personas.OrderByDescending(p => p.Nombre).ToList();
+			}
+			ordenarNombre = !ordenarNombre;
+		}
+	}
+
+	private bool ordenarApellido = true;
+	public void OrdenarApellido(){
+
+		if (personas is not null)
+		{
+			if (ordenarApellido){
+				personas = personas.OrderBy(p => p.Apellido).ToList();
+
+			}else{
+				personas = personas.OrderByDescending(p => p.Apellido).ToList();
+			}
+			ordenarApellido = !ordenarApellido;
+		}
+	}
+	private bool ordenarEdad = true;
+	public void OrdenarEdad(){
+
+		if (personas is not null)
+		{
+			if (ordenarEdad){
+				personas = personas.OrderBy(p => p.Fecha_Nacimiento).ToList();
+
+			}else{
+				personas = personas.OrderByDescending(p => p.Fecha_Nacimiento).ToList();
+			}
+			ordenarEdad = !ordenarEdad;
+		}
+	}
+}

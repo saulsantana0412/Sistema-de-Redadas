@@ -1,0 +1,95 @@
+﻿@page "/Signo"
+@inject IPersonaService PersonaService
+
+<div class="Signos-Contenedor">
+<h1>Signos Zodiacales</h1>
+<div class="Signos">
+<div><p>Aries </p><p class="Cantidad_persona">@Aries</p></div>
+<div><p>Tauro </p><p class="Cantidad_persona">@Tauro</p></div>
+<div><p>Géminis </p><p class="Cantidad_persona">@Geminis</p></div>
+<div><p>Cáncer </p><p class="Cantidad_persona">@Cancer</p></div>
+<div><p>Leo </p><p class="Cantidad_persona">@Leo</p></div>
+<div><p>Virgo </p><p class="Cantidad_persona">@Virgo</p></div>
+<div><p>Libra </p><p class="Cantidad_persona">@Libra</p></div>
+<div><p>Escorpio </p><p class="Cantidad_persona">@Escorpio</p></div>
+<div><p>Sagitario </p><p class="Cantidad_persona">@Sagitario</p></div>
+<div><p>Capricornio </p><p class="Cantidad_persona">@Capricornio</p></div>
+<div><p>Acuario </p><p class="Cantidad_persona">@Acuario</p></div>
+<div><p>Piscis </p><p class="Cantidad_persona">@Piscis</p></div>
+</div>
+</div>
+
+@code {
+	private int Aries, Tauro, Geminis, Cancer, Leo, Virgo, Libra, Escorpio, Sagitario, Capricornio, Acuario, Piscis;
+
+	List<Persona>? personas;
+
+	protected override async Task OnInitializedAsync()
+	{
+		personas = (await PersonaService.ObtenerPersonas()).ToList();
+
+		foreach (var p in personas)
+		{
+			ObtenerSignoZodiacal(p.Fecha_Nacimiento);
+		}
+	}
+
+
+
+	private void ObtenerSignoZodiacal(DateOnly fechaNacimiento)
+	{
+		int dia = fechaNacimiento.Day;
+		int mes = fechaNacimiento.Month;
+
+		if ((dia >= 21 && mes == 3) || (dia <= 19 && mes == 4))
+		{
+			Aries += 1;
+		}
+		else if ((dia >= 20 && mes == 4) || (dia <= 20 && mes == 5))
+		{
+			Tauro += 1;
+		}
+		else if ((dia >= 21 && mes == 5) || (dia <= 20 && mes == 6))
+		{
+			Geminis += 1;
+
+		}
+		else if ((dia >= 21 && mes == 6) || (dia <= 22 && mes == 7))
+		{
+			Cancer += 1;
+		}
+		else if ((dia >= 23 && mes == 7) || (dia <= 22 && mes == 8))
+		{
+			Leo += 1;
+		}
+		else if ((dia >= 23 && mes == 8) || (dia <= 22 && mes == 9))
+		{
+			Virgo += 1;
+		}
+		else if ((dia >= 23 && mes == 9) || (dia <= 22 && mes == 10))
+		{
+			Libra += 1;
+		}
+		else if ((dia >= 23 && mes == 10) || (dia <= 21 && mes == 11))
+		{
+			Escorpio += 1;
+		}
+		else if ((dia >= 23 && mes == 11) || (dia <= 20 && mes == 12))
+		{
+			Sagitario += 1;
+		}
+		else if ((dia >= 22 && mes == 12) || (dia <= 19 && mes == 1))
+		{
+			Capricornio += 1;
+		}
+		else if ((dia >= 20 && mes == 1) || (dia <= 18 && mes == 2))
+		{
+			Acuario += 1;
+		}
+		else if ((dia >= 19 && mes == 2) || (dia <= 20 && mes == 3))
+		{
+			Piscis += 1;
+		}
+	}
+
+}

@@ -1,0 +1,29 @@
+.Menu{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 8vh;
+    align-items: center;
+    background-color: var(--negro);
+    font-size: 15px;
+    font-weight: 700;
+    justify-content: space-around;
+    padding: 0 100px;
+    box-sizing: border-box;
+    font-family: 'Martian Mono', monospace;
+}
+
+.Menu a{
+    font-family: 'Martian Mono', monospace;
+    text-decoration: none;
+    color: #fff;
+}
+
+.Menu a:hover{
+    color: var(--azul);
+}
+
+.icono {
+    width: 30px;
+    fill: aqua;
+}

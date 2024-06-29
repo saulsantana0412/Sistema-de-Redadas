@@ -1,0 +1,58 @@
+/*Propiedades contenedor*/
+
+.AgregarRedada-Contenedor{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 92vh;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    background-color: #e1e1e1;
+}
+
+/*Propiedades Contenedor de la tabla*/
+
+.Formulario{
+    width: 40vw;
+    margin-top: 4vh;
+}
+
+.Formulario div{
+    width: 40vw;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vh;
+}
+
+.Formulario p{
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+.Formulario input{
+    height: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    border: none;
+    border-bottom: solid 2px var(--azul);
+    background: none;
+    width: 100%;
+}
+.Formulario input:focus{
+    border: none;
+    border-bottom: solid 2px var(--naranja);
+    background: none;
+    outline: none;
+    text-decoration: none;
+}
+
+/* Propiedades boton signos */
+
+
+.BotonesRedada{
+    margin-top: 4vh;
+}
+

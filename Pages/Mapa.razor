@@ -1,0 +1,54 @@
+﻿@page "/mapa"
+@inject IJSRuntime JSRuntime
+@inject IRedadaService RedadaService
+@inject IPersonaService PersonaService
+@inject NavigationManager NavigationManager
+@implements IAsyncDisposable
+
+<NavMenu/>
+
+<div class="Mapa">
+    <div id="map" style="width: 100%; height: 100%;"></div>
+</div>
+
+@code {
+    private IJSObjectReference? module;
+    private string? result;
+
+    List<Persona>? personas;
+    Persona persona = new Persona();
+
+    protected override async Task OnInitializedAsync()
+    {
+        personas = (await PersonaService.ObtenerPersonas()).ToList();
+        StateHasChanged();
+
+    }
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./js/map.js");
+
+            if(module is not null && personas is not null)
+            {
+                result = await module.InvokeAsync<string>("createMap");
+
+                foreach (var p in personas)
+                {
+                    result = await module.InvokeAsync<string>("addMarker",p.Latitud, p.Longitud, p.Nombre, p.Apellido, p.Nacionalidad);
+                }
+            }
+
+        }
+    }
+
+    async ValueTask IAsyncDisposable.DisposeAsync()
+    {
+        if (module is not null)
+        {
+            await module.DisposeAsync();
+        }
+    }
+}

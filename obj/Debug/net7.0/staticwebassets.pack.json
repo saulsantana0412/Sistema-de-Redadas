@@ -1,0 +1,117 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Proyecto_Final.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Proyecto_Final.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\css\\AcercaDe.css",
+      "PackagePath": "staticwebassets\\css\\AcercaDe.css"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\css\\AgregarRedada.css",
+      "PackagePath": "staticwebassets\\css\\AgregarRedada.css"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\css\\Detenidos.css",
+      "PackagePath": "staticwebassets\\css\\Detenidos.css"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\css\\General.css",
+      "PackagePath": "staticwebassets\\css\\General.css"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\css\\Gestion.css",
+      "PackagePath": "staticwebassets\\css\\Gestion.css"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\css\\Mapa.css",
+      "PackagePath": "staticwebassets\\css\\Mapa.css"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\css\\Principal.css",
+      "PackagePath": "staticwebassets\\css\\Principal.css"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\css\\Redadas.css",
+      "PackagePath": "staticwebassets\\css\\Redadas.css"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\Detenido.svg",
+      "PackagePath": "staticwebassets\\imagenes\\Detenido.svg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\Icon_Css.svg",
+      "PackagePath": "staticwebassets\\imagenes\\Icon_Css.svg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\Icon_HTML.svg",
+      "PackagePath": "staticwebassets\\imagenes\\Icon_HTML.svg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\Icon_Java.svg",
+      "PackagePath": "staticwebassets\\imagenes\\Icon_Java.svg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\Icon_JavaScript.svg",
+      "PackagePath": "staticwebassets\\imagenes\\Icon_JavaScript.svg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\Icon_SQL.svg",
+      "PackagePath": "staticwebassets\\imagenes\\Icon_SQL.svg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\Mapa.svg",
+      "PackagePath": "staticwebassets\\imagenes\\Mapa.svg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\Redada.svg",
+      "PackagePath": "staticwebassets\\imagenes\\Redada.svg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\english.svg",
+      "PackagePath": "staticwebassets\\imagenes\\english.svg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\redada.jpeg",
+      "PackagePath": "staticwebassets\\imagenes\\redada.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\spanish.svg",
+      "PackagePath": "staticwebassets\\imagenes\\spanish.svg"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\imagenes\\yo.gif",
+      "PackagePath": "staticwebassets\\imagenes\\yo.gif"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\js\\map.js",
+      "PackagePath": "staticwebassets\\js\\map.js"
+    },
+    {
+      "Id": "C:\\Users\\sauls\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\2do Cuatrimestre\\Proyecto_Final\\Proyecto_Final\\Proyecto_Final\\wwwroot\\js\\utils.js",
+      "PackagePath": "staticwebassets\\js\\utils.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Proyecto_Final.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Proyecto_Final.props",
+      "PackagePath": "build\\Proyecto_Final.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Proyecto_Final.props",
+      "PackagePath": "buildMultiTargeting\\Proyecto_Final.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Proyecto_Final.props",
+      "PackagePath": "buildTransitive\\Proyecto_Final.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

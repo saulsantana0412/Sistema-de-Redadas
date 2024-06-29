@@ -1,0 +1,47 @@
+﻿@page "/AgregarRedada"
+@inject IRedadaService RedadaService
+@inject IPersonaService PersonaService
+@inject NavigationManager NavigationManager
+
+<NavMenu />
+<div class="AgregarRedada-Contenedor">
+<h1>Agregar Redada</h1>
+<div class="Formulario">
+	<div>
+		<p>Nombre:</p> 
+		<input class=" form-control" type=" text" @bind="redada.Nombre" />
+	</div>
+	<div>
+		<p>Vehiculo: </p>
+		<input class=" form-control" type=" text" @bind="redada.Tipo_Vehiculo" />
+	</div>
+	<div>
+		<p>Responsable: </p>
+		<input class=" form-control" type=" text" @bind="redada.Responsable"/>
+	</div>
+	<div>
+		<p>Fecha:</p> 
+		<input class=" form-control" type="date" @bind="redada.FechaRedada" min="01/01/1900"/>
+	</div>
+</div>
+
+<div class="BotonesRedada">
+	<input type="submit" value="Guardar" class="Signo-Boton" @onclick="GuardarRedada" />
+	<input type="submit" value="Cancelar" class="Signo-Boton" @onclick="Cancelar" />
+</div>
+</div>
+
+@code {
+	private Redada redada = new Redada();
+
+	protected async Task GuardarRedada()
+	{
+		await RedadaService.GuardarRedada(redada);
+		NavigationManager.NavigateTo($"/GestionRedada/{redada.Id}");
+	}
+
+	protected void Cancelar()
+	{
+		NavigationManager.NavigateTo("/Redadas");
+	}
+}

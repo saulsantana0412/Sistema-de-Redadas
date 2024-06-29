@@ -1,0 +1,104 @@
+
+.Redadas-Contenedor{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 92vh;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    padding: 4vh;
+    background-color: #e1e1e1;
+}
+
+/*Propiedades Contenedor de la tabla*/
+
+.Redadas-Contenedor-Tabla{
+    width: 70vw;
+    max-height: 60vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 4vh 0;
+    border-radius: 3px;
+    overflow-x: hidden;
+}
+
+/* Propiedades de Tabla */
+
+.Redadas-Tabla{
+    table-layout: fixed;
+    font-size: 12px;
+    width: 70vw;
+    border-collapse: collapse;
+}
+
+.Redadas-Tabla tr{
+    height: 35px;
+    border-bottom: solid 2px #e1e1e1;
+}
+
+.registro:hover{
+    background-color: #0077ff23;
+}
+
+.Redadas-Tabla td,th{
+    width: 10vw;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.Redadas-Tabla td{
+    font-weight: 300;
+    overflow-y: scroll;
+    
+}
+
+.Redadas-Tabla button{
+    background: none;
+    border: none;
+    margin-left: 10px;
+}
+
+.Redadas-Tabla button:hover{
+    color:#407fc6;
+    cursor: pointer;
+}
+.Acciones {
+    width: 5vw;
+    border-bottom: solid 2px #e1e1e1;
+}
+
+.Acciones {
+    height:  35px;
+    align-items: center;
+    justify-content: left;
+    width: 10vw;
+
+}
+.Acciones i{
+    color: var(--negro);
+    font-size: 15px;
+    padding-right: 10px;
+}
+
+.Acciones i:hover{
+    color: var(--naranja);
+    cursor: pointer;
+}
+
+.NuevaRedada-Boton{
+    background: none;
+    border:  solid 2px var(--azul);
+    margin-left: 10px;
+    padding: 10px;
+    color:var(--azul);
+    border-radius: 10px;
+}
+
+.NuevaRedada-Boton:hover{
+    color:#ffffff;
+    background-color:var(--azul) ;
+    cursor: pointer;
+}

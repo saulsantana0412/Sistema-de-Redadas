@@ -1,0 +1,8 @@
+C:\Users\sauls\Desktop\Migracion\BlazorApp2\BlazorApp2\obj\Debug\net7.0\Proyecto Final.csproj.AssemblyReference.cache
+C:\Users\sauls\Desktop\Migracion\BlazorApp2\BlazorApp2\obj\Debug\net7.0\Proyecto Final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sauls\Desktop\Migracion\BlazorApp2\BlazorApp2\obj\Debug\net7.0\Proyecto Final.AssemblyInfoInputs.cache
+C:\Users\sauls\Desktop\Migracion\BlazorApp2\BlazorApp2\obj\Debug\net7.0\Proyecto Final.AssemblyInfo.cs
+C:\Users\sauls\Desktop\Migracion\BlazorApp2\BlazorApp2\obj\Debug\net7.0\Proyecto Final.csproj.CoreCompileInputs.cache
+C:\Users\sauls\Desktop\Migracion\BlazorApp2\BlazorApp2\obj\Debug\net7.0\Proyecto Final.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sauls\Desktop\Migracion\BlazorApp2\BlazorApp2\obj\Debug\net7.0\Proyecto Final.RazorAssemblyInfo.cache
+C:\Users\sauls\Desktop\Migracion\BlazorApp2\BlazorApp2\obj\Debug\net7.0\Proyecto Final.RazorAssemblyInfo.cs

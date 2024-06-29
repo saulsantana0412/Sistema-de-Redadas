@@ -1,0 +1,73 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Proyecto_Final
+build_property.RootNamespace = Proyecto_Final
+build_property.ProjectDir = C:\Users\sauls\Desktop\Migracion\BlazorApp2\BlazorApp2\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\sauls\Desktop\Migracion\BlazorApp2\BlazorApp2
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Pages/AcercaDe.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNlcmNhRGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Pages/AgregarRedada.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWdyZWdhclJlZGFkYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Pages/Detenidos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0ZW5pZG9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Pages/GestionarRedada.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VzdGlvbmFyUmVkYWRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Pages/Mapa.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFwYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Pages/Principal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpbmNpcGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Pages/Redadas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVkYWRhcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Pages/VerRedada.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVyUmVkYWRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Shared/SignoZodiaco.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNpZ25vWm9kaWFjby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-5q5x6qz94l
+
+[C:/Users/sauls/Desktop/Migracion/BlazorApp2/BlazorApp2/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

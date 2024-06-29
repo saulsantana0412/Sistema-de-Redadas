@@ -1,0 +1,75 @@
+﻿@page "/Redadas"
+@inject IRedadaService RedadaService
+@inject NavigationManager NavigationManager
+@inject IPersonaService PersonaService
+
+<NavMenu />
+
+<div class="Redadas-Contenedor">
+<h1>Redadas</h1>
+
+<div class="Redadas-Contenedor-Tabla">
+	<table class="Redadas-Tabla">
+		<tr>
+			<th>Nombre </th>
+			<th>Tipo Vehiculo </th>
+			<th>Responsable </th>
+			<th>Fecha</th>
+			<th>Detenidos </th>
+			<th>Dinero</th>
+			<th class="Acciones"></th>
+		</tr>
+
+		@if(redadas is not null){
+		foreach (var r in redadas)
+		{
+			<tr class="registro">
+				<td>@r.Nombre</td>
+				<td>@r.Tipo_Vehiculo</td>
+				<td>@r.Responsable</td>
+				<td>@r.FechaRedada</td>
+				<td>@cantidad(r.Id)</td>
+				<td>@dinero(r.Id)</td>
+				<td class="Acciones">
+					<div class="accion">
+					<a href="/VerRedada/@r.Id/@r.Nombre"><i class="fa-solid fa-eye"></i></a> <a href="/GestionRedada/@r.Id"><i class="fa-solid fa-pen-to-square"></i></a>
+					</div>
+				</td>
+			</tr>
+		}}
+
+	</table>
+</div>
+	<button @onclick="Nueva" class="NuevaRedada-Boton">Nueva Redada</button>
+
+</div>
+
+@code {
+	List<Redada>? redadas;
+	Redada redada = new Redada();
+
+	protected override async Task OnInitializedAsync()
+	{
+		redadas = (await RedadaService.ObtenerRedadas()).ToList();
+	}
+
+
+	private int cantidad(int id)
+	{
+		return PersonaService.CantidadPersonas(id);
+
+	}
+
+	private int dinero(int id)
+	{
+		return PersonaService.CantidadDinero(id);
+
+	}
+
+	private void Nueva()
+	{
+		NavigationManager.NavigateTo($"/AgregarRedada");
+	}
+
+
+}

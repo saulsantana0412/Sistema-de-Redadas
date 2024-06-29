@@ -1,0 +1,100 @@
+.Contenedor-Principal{
+    background-color: var(--azul);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Cartas-Contenedor {
+    display: grid;
+    grid-template-columns: 30vh 30vh;
+    grid-template-rows: 30vh 30vh;
+    column-gap: 5vh;
+    row-gap: 5vh;
+    position: fixed;
+}
+
+.img{
+    width: 20vh;
+}
+
+.Acercade-img{
+    font-size: 14vh;
+    font-weight: 100;
+}
+
+.Carta {
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 4vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e1e1e1;
+
+}
+
+.Carta:hover{
+    background-color: var(--azul-oscuro);
+    cursor: pointer;
+
+}
+
+
+
+.Titulo-Principal{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul);
+    z-index: 2;
+
+}
+
+.img2, .img3, .img4{
+    width: 100vh;
+}
+
+.img2{
+    position: absolute;
+    z-index: 1;
+    margin-top: -40vw;
+    margin-left: -22vw;
+}
+
+.img3{
+    position: absolute;
+    z-index: 1;
+    margin-top: 500px;
+    margin-left: -10vw;
+}
+
+.img4{
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    margin-left: 65vw;
+}
+
+footer{
+    width: 100vw;
+    height: 8vh;
+    background-color: #e1e1e1;
+    position:sticky;
+    margin-top: 160vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Todo{
+    overflow-x: hidden;
+    background-color: var(--azul);
+}

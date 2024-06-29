@@ -1,0 +1,182 @@
+﻿@page "/GestionRedada"
+@page "/GestionRedada/{id:int}"
+@inject IRedadaService RedadaService
+@inject IPersonaService PersonaService
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+
+
+<NavMenu/>
+<div class="Detenidos-Contenedor">
+<h1>Gestion de Redadas</h1>
+<div class="Redada-Contenedor">
+	<div class="Datos">
+		<div>
+			<p class="Titulo-Gestion">Nombre </p>
+			<input type=" text" @bind="redada.Nombre" class="Dato-Gestion"/>
+		</div>
+
+		<div>
+			<p class="Titulo-Gestion">Tipo Vehiculo </p>
+			<input type=" text" @bind="redada.Tipo_Vehiculo" class="Dato-Gestion"/>
+		</div>
+		<div>
+			<p class="Titulo-Gestion">Responsable </p>
+			<input type=" text" @bind="redada.Responsable" class="Dato-Gestion"/>
+		</div>
+		<div>
+			<p class="Titulo-Gestion">Fecha </p>
+			<input type=" text" @bind="redada.FechaRedada" class="Dato-Gestion"/>
+		</div>
+		<div>
+			<p class="Titulo-Gestion">Cantidad Detenidos </p>
+			<p class="Dato-Gestion">@cantidad</p>
+		</div>
+		<div>
+			<p class="Titulo-Gestion" >Cantidad Dinero </p>
+			<p class="Dato-Gestion">$@dinero</p>
+		</div>
+	</div>
+		<div class="Redada-Botones">
+			<button type="submit" @onclick="GuardarRedada">Guardar Cambios</button>
+			<button @onclick="BorrarRedada">Eliminar Redada</button>
+		</div>
+		
+</div>
+
+
+<h1>Gestion de Detenidos</h1>
+
+<EditForm Model="personas">
+	<div class="Gestion-Contenedor-Tabla">
+		<table class="Gestion-Tabla">
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Nacionalidad</th>
+				<th>Identificacion</th>
+				<th>Color</th>
+				<th>Genero</th>
+				<th>Fecha de Nacimiento</th>
+				<th>Codigo Vital</th>
+				<th>Latitud</th>
+				<th>Longitud</th>
+				<th>Dinero (RD $)</th>
+				<th class="Columna-Borrar"></th>
+			</tr>
+
+			@if (personas is not null)
+			{
+				foreach (var p in personas)
+				{
+					<tr>
+						<td><input type="text" @bind="p.Nombre" required placeholder="Nombre"></td>
+						<td><input type="text" @bind="p.Apellido" required placeholder="Apellido"></td>
+						<td><input type="text" @bind="p.Nacionalidad" required placeholder="Nacionalidad"></td>
+						<td><input type="text" @bind="p.Identificacion" maxlength="10" minlength="9" placeholder="Identificacion"></td>
+						@if (p.Identificacion == null)
+						{
+							p.Identificacion = "n/a";
+						}
+						<td><input type="text" @bind="p.Color" required placeholder="Color"></td>
+						<td>
+							<select @bind="p.Genero" required>
+								<option>Masculino</option>
+								<option>Femenino</option>
+							</select>
+						</td>
+						<td><input type="date" @bind="p.Fecha_Nacimiento" min="1900-01-01" required ></td>
+						<td><input type="text" @bind="p.Codigo_Vital" maxlength="14" minlength="14" required placeholder="Codigo Vital"></td>
+						<td><input type="number" @bind="p.Latitud" step=0.00000000001 required></td>
+						<td><input type="number" @bind="p.Longitud" step=0.00000000001 required alt="Longitud"></td>
+						<td><input type="number" @bind="p.Dinero" required></td>
+						<td class="Columna-Borrar">
+							<button @onclick="() => RemoveRow(p)"><i class="fa-solid fa-trash"></i></button>
+						</td>
+					</tr>
+				}
+			}
+
+		</table>
+	</div>
+	<div class="Redada-Botones">
+	<button @onclick="AgregarFilaPersona">Agregar Detenido</button>
+	<button type="submit" @onclick="SaveChanges">Guardar Cambios</button>
+	</div>
+</EditForm>
+</div>
+
+@code {
+	[Parameter]
+	public int id { get; set; }
+
+
+	Redada redada = new Redada();
+	private int dinero;
+	private int cantidad;
+
+	protected async Task GuardarRedada()
+	{
+		await RedadaService.GuardarRedada(redada);
+	}
+
+	protected async Task BorrarRedada()
+	{
+		var confirmacion = await JSRuntime.InvokeAsync<bool>("confirmar","Confirmar","Estas seguro de borrar esta Redada. No se podra recuperar.","question");
+		if(confirmacion){
+		await PersonaService.BorrarPersonas(personas);
+		await RedadaService.BorrarRedada(redada.Id);
+		NavigationManager.NavigateTo($"/Redadas");
+		}
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		cantidad = PersonaService.CantidadPersonas(id);
+		dinero = PersonaService.CantidadDinero(id);
+		personas = (await PersonaService.ObtenerPersonas(id)).ToList();
+		redada = await RedadaService.ObtenerRedadaPorId(id);
+	}
+
+
+	List<Persona>? personas;
+	Persona persona = new Persona();
+
+
+	private async Task SaveChanges()
+	{
+		persona.Id_Redada = id;
+		await PersonaService.Guardar();
+		cantidad = PersonaService.CantidadPersonas(id);
+		dinero = PersonaService.CantidadDinero(id);
+		
+	}
+
+	private async Task AgregarFilaPersona()
+	{
+		persona.Id_Redada = id;
+		await PersonaService.AgregarFilaPersona(persona);
+		persona = new Persona();
+		await SaveChanges();
+		cantidad = PersonaService.CantidadPersonas(id);
+		dinero = PersonaService.CantidadDinero(id);
+		personas = (await PersonaService.ObtenerPersonas(id)).ToList();
+	}
+
+	private async Task RemoveRow(Persona row)
+	{
+		var confirmacion = await JSRuntime.InvokeAsync<bool>("confirmar","Confirmar","Estas seguro de borrar este Detenido. No se podra recuperar.","question");
+		if(confirmacion){
+			await PersonaService.BorrarPersona(row.Id);
+			personas = (await PersonaService.ObtenerPersonas(id)).ToList();
+			cantidad = PersonaService.CantidadPersonas(id);
+			dinero = PersonaService.CantidadDinero(id);
+		}
+		
+	}
+
+	protected void Cancelar()
+	{
+		NavigationManager.NavigateTo($"/");
+	}
+}

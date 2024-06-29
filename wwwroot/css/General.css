@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+:root {
+    --azul: #29a4e2;
+    /* --azul: #407fc6; */
+    --azul-claro: #7cc0e2;
+    --azul-oscuro: #308ebd;
+    --naranja: #ff5e00;
+    --negro: #232323;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Martian Mono', monospace;
+    color: #232323;
+    scroll-behavior: smooth;
+}
+
+*::selection{
+    background-color: var(--azul);
+}
+
+
+
+/* Propiedades de scrollbar */
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+    width:5px;
+}
+
+*::-webkit-scrollbar:horizontal {
+    height:5px;
+}
+
+*::-webkit-scrollbar-button:increment{
+    display: none;
+} 
+*::-webkit-scrollbar-thumb {
+    background-color: var(--azul-claro);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover, *::-webkit-scrollbar-thumb:active {
+    background-color:var(--azul);
+}
+
+
+*::-webkit-scrollbar-track {
+    background: #e1e1e100;
+    border-radius: 4px;
+}
+
